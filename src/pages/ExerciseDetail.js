@@ -9,6 +9,7 @@ import {
   youtubeOptions,
 } from "../utils/fetchData";
 import { useParams } from "react-router-dom";
+import ScrollArrow from "../components/ScrollArrow";
 
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
@@ -55,6 +56,7 @@ const ExerciseDetail = () => {
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
+      <ScrollArrow />
       <ExerciseVideos
         exerciseVideos={exerciseVideos}
         name={exerciseDetail.name}
